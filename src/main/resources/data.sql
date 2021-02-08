@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS COURSES;
+
+CREATE TABLE COURSES (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL
+);
+
+INSERT INTO COURSES (name) VALUES
+  ('Java Course'),
+  ('Spring Course'),
+  ('Kubernetes course');
