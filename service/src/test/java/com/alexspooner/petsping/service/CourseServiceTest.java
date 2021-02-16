@@ -1,7 +1,7 @@
 package com.alexspooner.petsping.service;
 
 import com.alexspooner.petspring.model.Course;
-import com.alexspooner.petspring.repository.course.CourseRepository;
+import com.alexspooner.petspring.repository.dao.CourseRepository;
 import com.alexspooner.petspring.repository.entities.CourseEntity;
 import com.alexspooner.petspring.service.CourseService;
 import org.junit.jupiter.api.BeforeEach;

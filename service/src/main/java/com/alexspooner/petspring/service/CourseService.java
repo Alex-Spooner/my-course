@@ -1,7 +1,7 @@
 package com.alexspooner.petspring.service;
 
 import com.alexspooner.petspring.model.Course;
-import com.alexspooner.petspring.repository.course.CourseRepository;
+import com.alexspooner.petspring.repository.dao.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
