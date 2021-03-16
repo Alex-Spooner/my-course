@@ -4,6 +4,7 @@ import com.alexspooner.petspring.model.Course;
 import com.alexspooner.petspring.repository.dao.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Spliterator;
@@ -22,6 +23,7 @@ public class CourseService {
         this.courseRepository = courseRepository;
     }
 
+    @Transactional
     public List<Course> getAllCourses() {
         return stream(spliteratorUnknownSize(courseRepository.findAll().iterator(), Spliterator.ORDERED), false)
                 .map(courseEntity -> new Course(courseEntity.getId(), courseEntity.getName()))
