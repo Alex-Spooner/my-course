@@ -4,6 +4,7 @@ import com.alexspooner.petspring.model.Course;
 import com.alexspooner.petspring.repository.dao.CourseRepository;
 import com.alexspooner.petspring.repository.entities.CourseEntity;
 import com.alexspooner.petspring.service.CourseService;
+import com.alexspooner.petspring.service.CourseServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +24,7 @@ public class CourseServiceTest {
     @BeforeEach
     public void setUp() {
         courseRepository = mock(CourseRepository.class);
-        courseService = new CourseService(courseRepository);
+        courseService = new CourseServiceImpl(courseRepository);
     }
 
     @Test
