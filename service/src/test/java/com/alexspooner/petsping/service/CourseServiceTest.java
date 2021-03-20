@@ -32,7 +32,7 @@ public class CourseServiceTest {
         int courseId = 1;
         when(courseRepository.findAll()).thenReturn(singletonList(new CourseEntity(courseId, "Java Course")));
 
-        List<Course> resultCourse = courseService.getAllCourses();
+        List<Course> resultCourse = courseService.findAll();
 
         assertThat(resultCourse.size()).isEqualTo(1);
         assertThat(resultCourse.get(0).getId()).isEqualTo(courseId);
