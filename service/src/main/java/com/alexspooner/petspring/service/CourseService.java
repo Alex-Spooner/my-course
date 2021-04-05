@@ -1,6 +1,6 @@
 package com.alexspooner.petspring.service;
 
-import com.alexspooner.petspring.model.Course;
+import com.alexspooner.petspring.model.service.Course;
 
 import java.util.List;
 

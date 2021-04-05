@@ -1,4 +1,4 @@
-package com.alexspooner.petspring.model;
+package com.alexspooner.petspring.model.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

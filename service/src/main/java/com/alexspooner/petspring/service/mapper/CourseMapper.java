@@ -1,6 +1,6 @@
 package com.alexspooner.petspring.service.mapper;
 
-import com.alexspooner.petspring.model.Course;
+import com.alexspooner.petspring.model.service.Course;
 import com.alexspooner.petspring.repository.entities.CourseEntity;
 
 import java.util.Iterator;

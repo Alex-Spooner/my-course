@@ -1,7 +1,8 @@
 package com.alexspooner.petspring.service;
 
+import com.alexspooner.petspring.model.exception.NoItemException;
 import com.alexspooner.petspring.service.mapper.CourseMapper;
-import com.alexspooner.petspring.model.Course;
+import com.alexspooner.petspring.model.service.Course;
 import com.alexspooner.petspring.repository.dao.CourseRepository;
 import com.alexspooner.petspring.repository.entities.CourseEntity;
 import lombok.var;
@@ -61,7 +62,7 @@ public class CourseServiceImpl implements CourseService {
 
     private CourseEntity findByIdChecked(int id) {
         return courseRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("There is no course for the id " + id));
+                .orElseThrow(() -> new NoItemException("There is no course for the id " + id));
     }
 
 }

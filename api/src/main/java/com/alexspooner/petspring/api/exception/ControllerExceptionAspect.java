@@ -1,5 +1,6 @@
-package com.alexspooner.petspring.api.exceptions;
+package com.alexspooner.petspring.api.exception;
 
+import com.alexspooner.petspring.model.exception.NoItemException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -18,15 +19,15 @@ public class ControllerExceptionAspect {
     }
 
     @Around("pointcut()")
-    public Object logExceptionIfHappens(ProceedingJoinPoint proceedingJoinPoint) {
+    public Object logExceptionIfHappens(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Object result;
 
         try {
             result = proceedingJoinPoint.proceed();
-        } catch (Throwable throwable) {
-            log.error(throwable.getMessage());
+        } catch (NoItemException e) {
+            log.error(e.getMessage());
             return ResponseEntity.badRequest()
-                    .body(throwable.getMessage());
+                    .body(e.getMessage());
         }
 
         return result;

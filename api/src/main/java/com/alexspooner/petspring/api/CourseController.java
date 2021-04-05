@@ -1,6 +1,6 @@
 package com.alexspooner.petspring.api;
 
-import com.alexspooner.petspring.model.Course;
+import com.alexspooner.petspring.model.service.Course;
 import com.alexspooner.petspring.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
