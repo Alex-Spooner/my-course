@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>com.alexspooner</groupId>
-            <artifactId>models</artifactId>
+            <artifactId>model</artifactId>
         </dependency>
 
     </dependencies>
