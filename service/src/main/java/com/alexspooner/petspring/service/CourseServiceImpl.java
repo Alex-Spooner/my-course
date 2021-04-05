@@ -1,6 +1,6 @@
 package com.alexspooner.petspring.service;
 
-import com.alexspooner.petspring.mapper.CourseMapper;
+import com.alexspooner.petspring.service.mapper.CourseMapper;
 import com.alexspooner.petspring.model.Course;
 import com.alexspooner.petspring.repository.dao.CourseRepository;
 import com.alexspooner.petspring.repository.entities.CourseEntity;

@@ -4,6 +4,7 @@ import com.alexspooner.petspring.model.Course;
 import com.alexspooner.petspring.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,34 +21,35 @@ public class CourseController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Course> getAll() {
-        return courseService.findAll();
+    public ResponseEntity<List<Course>> getAll() {
+        return ResponseEntity.ok(courseService.findAll());
     }
 
     @GetMapping(path = "search", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Course> getByName(@RequestParam String name) {
-        return courseService.findByName(name);
+    public ResponseEntity<List<Course>> getByName(@RequestParam String name) {
+        return ResponseEntity.ok(courseService.findByName(name));
     }
 
     @GetMapping(path = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Course getById(@PathVariable int id) {
-        return courseService.findById(id);
+    public ResponseEntity<Course> getById(@PathVariable int id) {
+        return ResponseEntity.ok(courseService.findById(id));
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Course addCourse(@RequestBody Course course) {
-        return courseService.add(course);
+    public ResponseEntity<Course> addCourse(@RequestBody Course course) {
+        return ResponseEntity.ok(courseService.add(course));
     }
 
     @PutMapping(path = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Course updateCourse(@PathVariable int id, @RequestBody Course course) {
+    public ResponseEntity<Course> updateCourse(@PathVariable int id, @RequestBody Course course) {
         course.setId(id);
-        return courseService.update(course);
+        return ResponseEntity.ok(courseService.update(course));
     }
 
     @DeleteMapping(path = "{id}")
-    public void deleteCourse(@PathVariable int id) {
+    public ResponseEntity<?> deleteCourse(@PathVariable int id) {
         courseService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
