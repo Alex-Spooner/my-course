@@ -20,8 +20,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.alexspooner</groupId>
-	<artifactId>petspring</artifactId>
+	<groupId>com.alexspooner.petspring</groupId>
+	<artifactId>petspring-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Spring pet project</name>
 	<description>Pet project for Spring Boot</description>
@@ -36,31 +36,31 @@
 			<!-- Internal -->
 
 			<dependency>
-				<groupId>com.alexspooner</groupId>
+				<groupId>com.alexspooner.petspring</groupId>
 				<artifactId>api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.alexspooner</groupId>
+				<groupId>com.alexspooner.petspring</groupId>
 				<artifactId>application</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.alexspooner</groupId>
+				<groupId>com.alexspooner.petspring</groupId>
 				<artifactId>model</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.alexspooner</groupId>
+				<groupId>com.alexspooner.petspring</groupId>
 				<artifactId>repository</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.alexspooner</groupId>
+				<groupId>com.alexspooner.petspring</groupId>
 				<artifactId>service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
